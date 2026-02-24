@@ -18,20 +18,19 @@
 
 .surface {
   background-image: url("./images/Img_02.png");
-
   position: absolute;
   width: 500%;
   height: 15rem;
   bottom: 0;
   left: 0;
   animation: movenature 1s linear infinite;
+    animation-play-state: paused;
 }
 
 .car {
   position: absolute;
   bottom: 1rem;
   left: 24%;
-  animation: moveCar 1s linear infinite;
 }
 
 @keyframes movenature {
@@ -40,7 +39,7 @@
   }
 }
 
-@keyframes moveCar {
+@keyframes movecar {
   100% {
     transform: translateY(-1px);
   }
@@ -51,4 +50,8 @@
   0% {
     transform: translateY(1px);
   }
+}
+
+.car.move {
+  animation: movecar 1s linear infinite;
 }
